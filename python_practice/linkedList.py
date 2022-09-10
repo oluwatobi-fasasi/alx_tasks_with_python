@@ -5,7 +5,7 @@ class Node:
 
 
 
-class LinkedList:
+class Linked:
     def __init__(self):
         self.head = None
 
@@ -27,7 +27,7 @@ class LinkedList:
                 n = n.ref
             print(l, len(l))
 
-link1 = LinkedList()
+link1 = Linked()
 for i in range(50, 9, -10):
     link1.add_begin(i)
 link1.print_element()
