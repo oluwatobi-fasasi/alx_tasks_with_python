@@ -15,6 +15,17 @@ class Linked:
         self.head = new_node
 
 
+    def add_end(self, data):
+        newNode = Node(data)
+        if self.head is None:
+            self.head = newNode
+        else:
+            n = self.head
+            while n.ref is not None:
+                n = n.ref
+            n.ref = newNode
+
+
     def print_element(self):
         if self.head is None:
             print('This Linked list is empty')
@@ -30,4 +41,5 @@ class Linked:
 link1 = Linked()
 for i in range(50, 9, -10):
     link1.add_begin(i)
+    link1.add_end(i*2)
 link1.print_element()
